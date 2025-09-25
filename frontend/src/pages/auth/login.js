@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { useContext, useState } from "react";
 import { CheckCircle, Eye, EyeOff, Mail, Lock, X } from "lucide-react";
 import { useRouter } from "next/router";

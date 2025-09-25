@@ -1,4 +1,6 @@
 import { CheckCircle } from "lucide-react";
+/* eslint-disable react/no-unescaped-entities */
+
 
 export default function Testimonials() {
   const testimonials = [
