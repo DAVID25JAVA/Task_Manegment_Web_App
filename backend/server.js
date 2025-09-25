@@ -10,8 +10,7 @@ connectDB();
 
 const app = express();
 
-const FRONTEND_URL =
-  process.env.FRONTEND_URL || "https://task-manegment-web-app-x7lc.vercel.app/";
+const FRONTEND_URL = "https://task-manegment-web-app-x7lc.vercel.app/";
 
 app.use(
   cors({
