@@ -2,7 +2,8 @@
 import axios from "axios";
 
 // API URL
-const APIURL = "http://localhost:4000/api/";
+// const APIURL = "http://localhost:4000/api/";
+const APIURL = "https://task-manegment-web-app.vercel.app/api/";
 
 const API = async (method, url, data = {}, token = null) => {
   try {
@@ -10,10 +11,10 @@ const API = async (method, url, data = {}, token = null) => {
       method,
       url: APIURL + url,
       data,
-      withCredentials: true, // ✅ Sends cookies (for auth token)
+      withCredentials: true,
       headers: {
         "Content-Type": "application/json",
-        ...(token && { Authorization: `Bearer ${token}` }), // Optional: Bearer if needed alongside cookies
+        ...(token && { Authorization: `Bearer ${token}` }),
       },
     });
 
@@ -26,7 +27,9 @@ const API = async (method, url, data = {}, token = null) => {
       status: error.response?.status,
       message: error.response?.data?.message || error.message,
       url: APIURL + url,
-      isCORS: error.message.includes("Network Error") || error.message.includes("CORS"),
+      isCORS:
+        error.message.includes("Network Error") ||
+        error.message.includes("CORS"),
     });
 
     // Throw for the caller to handle
