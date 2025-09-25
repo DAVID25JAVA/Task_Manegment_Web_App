@@ -10,20 +10,20 @@ connectDB();
 
 const app = express();
 
-const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:3000";
+const FRONTEND_URL =
+  process.env.FRONTEND_URL || "https://task-manegment-web-app-x7lc.vercel.app/";
 
- 
 app.use(
   cors({
-    origin: FRONTEND_URL ,  
-    credentials: true,  
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],  
-    allowedHeaders: ["Content-Type", "Authorization"],  
+    origin: FRONTEND_URL,
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
-app.use(express.json());  
-app.use(cookieParser());  
+app.use(express.json());
+app.use(cookieParser());
 
 // Routes
 app.use("/api/user", userRouter);
