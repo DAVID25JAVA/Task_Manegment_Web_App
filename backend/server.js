@@ -10,11 +10,11 @@ connectDB();
 
 const app = express();
 
-const FRONTEND_URL = "https://task-manegment-web-app-bpu3.vercel.app/";
+// const FRONTEND_URL = "https://task-manegment-web-app-zjuu.vercel.app/";
 
 app.use(
   cors({
-    origin: FRONTEND_URL,
+    origin:  "https://task-manegment-web-app-zjuu.vercel.app/",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
