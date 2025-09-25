@@ -14,7 +14,7 @@ const app = express();
 
 app.use(
   cors({
-    origin:  "https://task-manegment-web-app-zjuu.vercel.app/",
+    origin:  "https://task-manegment-web-app-zjuu.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
